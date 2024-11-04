@@ -75,7 +75,7 @@ jobs:
   #   some-secret: ${{ secrets.some-secret}}
   print-deploy-result:
     needs: deploy
-    uses: echo ${{ needs.deploy.outputs.result}}
+    uses: echo "${{ needs.deploy.outputs.result}}"
   report: 
     needs: [lint,deploy]
     if: failure()
